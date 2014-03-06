@@ -14,8 +14,17 @@ namespace GenericStackTest.IntStackTest
         public void IfPushNumberTwoThenStackShouldContainNumberTwoAtTop()
         {
             var stack = new IntStack();
-            stack.push(2);
+            stack.Push(2);
             Assert.AreEqual(stack.Top(), 2);
+        }
+
+        [Test]
+        public void IfPushNumberTenAndThreeThenStackShouldContaintNumberThreeAtTop()
+        {
+            var stack = new IntStack();
+            stack.Push(10);
+            stack.Push(3);
+            Assert.AreEqual(stack.Top(), 3);
         }
     }
 }
