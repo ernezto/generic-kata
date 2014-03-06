@@ -2,28 +2,28 @@ using System;
 
 namespace GenericStack
 {
-    public class IntStack
+    public class Stack<T>
     {
-        private int[] items;
+        private T[] items;
         private int index;
 
         public int Capacity { get; private set; }
 
-        public IntStack(int capacity)
+        public Stack(int capacity)
         {
             Capacity = capacity;
-            items = new int[Capacity];
+            items = new T[Capacity];
             index = 0;
         }
 
-        public void Push(int element)
+        public void Push(T element)
         {
             if (index == Capacity)
                 throw new InvalidOperationException();
             items[index++] = element;
         }
 
-        public int Top()
+        public T Top()
         {
             if (index == 0 ) throw new InvalidOperationException();
 

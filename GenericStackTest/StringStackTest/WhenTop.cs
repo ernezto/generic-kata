@@ -10,7 +10,7 @@ namespace GenericStackTest.StringStackTest
         [Test]
         public void ThenShouldReturnHolaIfHolaIsAtTopOfStack()
         {
-            var stack = new StringStack(1);
+            var stack = new Stack<String>(1);
             stack.Push("Hola");
             Assert.AreEqual("Hola", stack.Top());
         }
@@ -18,7 +18,7 @@ namespace GenericStackTest.StringStackTest
         [Test]
         public void ThenNextTopShouldReturnPreviousNumber()
         {
-            var stack = new StringStack(2);
+            var stack = new Stack<String>(2);
             stack.Push("Hola");
             stack.Push("Mundo");
             stack.Top();
@@ -30,7 +30,7 @@ namespace GenericStackTest.StringStackTest
         [ExpectedException(typeof(InvalidOperationException))]
         public void ThenShouldThrowInvalidOperationIfStackDoesNotContainsElements()
         {
-            var stack = new StringStack(1);
+            var stack = new Stack<String>(1);
             stack.Top();
         }
 

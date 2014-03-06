@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using GenericStack;
 using NUnit.Framework;
 
@@ -13,7 +10,7 @@ namespace GenericStackTest.StringStackTest
         [Test]
         public void IfPushHolaThenStackShouldContainNumberHolaAtTop()
         {
-            var stack = new StringStack(1);
+            var stack = new Stack<String>(1);
             stack.Push("Hola");
             Assert.AreEqual(stack.Top(), "Hola");
         }
@@ -21,7 +18,7 @@ namespace GenericStackTest.StringStackTest
         [Test]
         public void IfPushHolaTenAndMundoThenStackShouldContainHolaAtTop()
         {
-            var stack = new StringStack(1);
+            var stack = new Stack<String>(1);
             stack.Push("Hola");
             Assert.AreEqual("Hola", stack.Top());
         }
@@ -30,7 +27,7 @@ namespace GenericStackTest.StringStackTest
         [ExpectedException(typeof(InvalidOperationException))]
         public void ShouldThrowInvalidOperationExceptionIfCapacityIsOverloaded()
         {
-            var stack = new StringStack(2);
+            var stack = new Stack<String>(2);
             stack.Push("1");
             stack.Push("2");
             stack.Push("3");

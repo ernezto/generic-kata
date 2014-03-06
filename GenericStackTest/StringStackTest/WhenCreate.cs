@@ -1,4 +1,5 @@
-﻿using GenericStack;
+﻿using System;
+using GenericStack;
 using NUnit.Framework;
 
 namespace GenericStackTest.StringStackTest
@@ -9,14 +10,14 @@ namespace GenericStackTest.StringStackTest
         [Test]
         public void ShouldHaveAMaximumCapacity()
         {
-            var stack = new StringStack(1);
+            var stack = new Stack<String>(1);
             Assert.IsNotNull(stack.Capacity);
         }
 
         [Test]
         public void CapacityShouldBeGreaterOrEqualThanZero()
         {
-            var stack = new StringStack(1);
+            var stack = new Stack<String>(1);
             Assert.IsTrue(stack.Capacity >=0 );
         }
 
@@ -24,7 +25,7 @@ namespace GenericStackTest.StringStackTest
         public void CapacityShouldBe50If50IsPassedToTheConstructor()
         {
             const int maximum = 50;
-            var stack = new StringStack(maximum);
+            var stack = new Stack<String>(maximum);
             Assert.AreEqual(50, stack.Capacity);
         }
     }

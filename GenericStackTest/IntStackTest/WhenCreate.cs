@@ -9,14 +9,14 @@ namespace GenericStackTest.IntStackTest
         [Test]
         public void ShouldHaveAMaximumCapacity()
         {
-            var stack = new IntStack(1);
+            var stack = new Stack<int>(1);
             Assert.IsNotNull(stack.Capacity);
         }
 
         [Test]
         public void CapacityShouldBeGreaterOrEqualThanZero()
         {
-            var stack = new IntStack(1);
+            var stack = new Stack<int>(1);
             Assert.IsTrue(stack.Capacity >=0 );
         }
 
@@ -24,7 +24,7 @@ namespace GenericStackTest.IntStackTest
         public void CapacityShouldBe50If50IsPassedToTheConstructor()
         {
             const int maximum = 50;
-            var stack = new IntStack(maximum);
+            var stack = new Stack<int>(maximum);
             Assert.AreEqual(50, stack.Capacity);
         }
     }
