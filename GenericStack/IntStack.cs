@@ -1,26 +1,33 @@
+using System;
+
 namespace GenericStack
 {
     public class IntStack
     {
         private int[] items;
-        private int size;
         private int index;
 
-        public IntStack()
+        public int Capacity { get; private set; }
+
+        public IntStack(int capacity)
         {
-            size = 2;
-            items = new int[size];
+            Capacity = capacity;
+            items = new int[Capacity];
             index = 0;
         }
 
         public void Push(int element)
         {
+            if (index == Capacity)
+                throw new InvalidOperationException();
             items[index++] = element;
         }
 
         public int Top()
         {
-            return items[index - 1];
+            if (index == 0 ) throw new InvalidOperationException();
+
+            return items[--index];
         }
     }
 }

@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntStackTest\WhenCreate.cs" />
     <Compile Include="IntStackTest\WhenPush.cs" />
+    <Compile Include="IntStackTest\WhenTop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
