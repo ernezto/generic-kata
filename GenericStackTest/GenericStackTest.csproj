@@ -47,6 +47,9 @@
     <Compile Include="IntStackTest\WhenCreate.cs" />
     <Compile Include="IntStackTest\WhenPush.cs" />
     <Compile Include="IntStackTest\WhenTop.cs" />
+    <Compile Include="StringStackTest\WhenCreate.cs" />
+    <Compile Include="StringStackTest\WhenPush.cs" />
+    <Compile Include="StringStackTest\WhenTop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +61,7 @@
       <Name>GenericStack</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
